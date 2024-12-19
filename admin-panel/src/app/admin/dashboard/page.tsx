@@ -1,4 +1,5 @@
 "use client"
+import Popup from '@/components/admin-apnel/Popup';
 import ProductRow from '@/components/admin-apnel/ProductRow';
 import { setLoading } from '@/redux/features/loadingSlice';
 import { useAppDispatch } from '@/redux/hooks';
@@ -64,9 +65,9 @@ axios.get("/api/get_products").then((res) => setProducts(res.data)).catch(err =>
         </div>
       </div>
 
-      {/* {openPopup && (
+      {openPopup && (
         <Popup setOpenPopup={setOpenPopup} setUpdateTable={setUpdateTable} />
-      )} */}
+      )}
     </div>
   );
 };
